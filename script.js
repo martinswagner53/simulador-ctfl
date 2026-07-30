@@ -290,6 +290,11 @@ function mostrarPagina() {
 
     app.innerHTML = html;
 
+    window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+});
+
     const questoesDaPagina = questoesSimulado.slice(inicio, fim);
 
     const todasRespondidas = questoesDaPagina.every(
