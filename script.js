@@ -293,7 +293,7 @@ function mostrarPagina() {
     window.scrollTo({
     top: 0,
     behavior: "smooth"
-});
+    });
 
     const questoesDaPagina = questoesSimulado.slice(inicio, fim);
 
