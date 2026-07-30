@@ -293,7 +293,7 @@ function mostrarPagina() {
     window.scrollTo({
     top: 0,
     behavior: "smooth"
-    });
+});
 
     const questoesDaPagina = questoesSimulado.slice(inicio, fim);
 
@@ -789,6 +789,18 @@ function salvarResposta(id, resposta){
     if(btnProxima){
 
         btnProxima.disabled = !todasRespondidas;
+
+    }
+
+    // Verifica se TODAS as questões do simulado foram respondidas
+    const todasRespondidasSimulado =
+        Object.keys(respostas).length === questoesSimulado.length;
+
+    const btnFinalizar = document.getElementById("btnFinalizar");
+
+    if (btnFinalizar) {
+
+        btnFinalizar.disabled = !todasRespondidasSimulado;
 
     }
 
